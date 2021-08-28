@@ -1,0 +1,9 @@
+main: net.heavin.StaffEssentials.StaffEssentials
+version: 1.0
+name: StaffEssentials
+api-version: 1.16
+softdepend: [SuperVanish]
+commands:
+  staff:
+    description: Main Command for the plugin
+    aliases: [staffessentials, se]

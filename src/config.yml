@@ -1,0 +1,41 @@
+# Uncategorized
+prefix: "&7[&6STAFF&7]&r" #leave the "&r" on the end of the prefix or the color will break // put the word None if you want to disable the prefix
+no-permission: "&cYou dont have permission to use this command/feature!"
+# Staff Configuration
+staffmode-enabled-message: "&aYou have &aenabled &6Staff Mode"
+staffmode-disabled-message: "&aYou have &cdisabled &6Staff Mode"
+not-in-staff-mode: "&cYou are currently not in staff mode!"
+# Vanish Configuration
+vanish-enabled-message: "&aYou have &eenabled &eVanish Mode"
+vanish-disabled-message: "&aYou have &cdisabled &eVanish Mode"
+# Night Vision Configuration
+night-vision-enabled-message: "&aYou have &aenabled &6Night-Vision"
+night-vision-disabled-message: "&aYou have &cdisbled &6Night-Vision"
+# Flight Configuration 
+flight-enabled-message: "&aYou have &aenabled &6Flight Mode"
+flight-disabled-message: "&aYou have &cdisbled &6Flight Mode"
+
+
+
+
+
+
+# Admin GUI Configurations
+teleported-to-player: "&eYou have teleported to %target%"
+
+
+
+
+
+# BAN Configuration
+ban:
+  duration: # -Material,Length
+    -
+
+less-likely-to-be-used:
+  staff-already-enabled: "&cYou already enabled &eStaff Mode"
+  night-vision-already-enabled: "&cYou already enabled &eNight-Vision"
+  night-vision-already-disabled: "&cYou already disabled &eNight-Vision"
+  vanished-staff-left-message: "A vanished staff left the server!"
+  vanish-already-enabled: "&cYou are already in &eVanish Mode"
+  vanish-already-disabled: "&cYou already disabled &eVanish Mode"
