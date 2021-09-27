@@ -24,10 +24,12 @@ public class AdminCore extends JavaPlugin{
 
 		new Config(this);
 		this.data = new DataManager(this);
-		Bukkit.getConsoleSender().sendMessage(Methods.color("&7---------- &7[&6StaffEssentials&7] ----------"));
+		Bukkit.getConsoleSender().sendMessage(Methods.color("&7---------- &7[&6AdminCore&7] ----------"));
 		Bukkit.getConsoleSender().sendMessage(Methods.color(""));
-		Bukkit.getConsoleSender().sendMessage(Methods.color("&b StaffCore has been successfully enabled"));
+		Bukkit.getConsoleSender().sendMessage(Methods.color("&b AdminCore has been successfully enabled"));
 		Bukkit.getConsoleSender().sendMessage(Methods.color("&7          -This plugin is made by Heavin"));
+		Bukkit.getConsoleSender().sendMessage(Methods.color("&&- &fWebsite&7: https://www.heavin.cf"));
+		Bukkit.getConsoleSender().sendMessage(Methods.color("&&- &fGithub&7: https://www.heavin.cf"));
 		Bukkit.getConsoleSender().sendMessage(Methods.color("&c"));
 		Bukkit.getConsoleSender().sendMessage(Methods.color("&7---------------------------------------"));
 		getCommand("staff").setExecutor(new Commands());
