@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/Downloads/SuperVanish-6.2.6.jar"/>
-	<classpathentry kind="lib" path="D:/..Spigot Server Versions Files/1.16.5/spigot-1.16.5.jar"/>
+	<classpathentry kind="lib" path="D:/..Spigot Server Versions Files/1.13/spigot-1.13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

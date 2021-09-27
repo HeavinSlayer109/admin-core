@@ -49,7 +49,7 @@ public class PlayerList {
 	      ItemStack item = new ItemStack(Material.PLAYER_HEAD, 1, (short)3);
 	      SkullMeta meta = (SkullMeta)item.getItemMeta();
 	     
-	      meta.setOwner(online.getName());
+	      meta.setOwningPlayer(Bukkit.getOfflinePlayer(online.getName()));
 	      meta.setDisplayName(online.getName());
 	      List<String> lore = new ArrayList<>();
 	      lore.add(ChatColor.translateAlternateColorCodes('&', "&7Status: &aOnline"));

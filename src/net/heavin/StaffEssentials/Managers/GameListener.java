@@ -11,19 +11,18 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.metadata.MetadataValue;
 
-import net.heavin.StaffEssentials.Config;
-import net.heavin.StaffEssentials.StaffEssentials;
+import net.heavin.StaffEssentials.AdminCore;
+import net.heavin.StaffEssentials.DataManagers.Config;
 import net.heavin.StaffEssentials.GUIs.AdminGUI;
 import net.heavin.StaffEssentials.GUIs.PlayerList;
 import net.heavin.StaffEssentials.GUIs.StaffGUI;
-import net.heavin.StaffEssentials.GUIs.Ban.BanGUI;
 
 public class GameListener implements Listener{
 	
 	
 	@SuppressWarnings("unused")
-	private StaffEssentials plugin;
-	public GameListener(StaffEssentials plugin) {
+	private AdminCore plugin;
+	public GameListener(AdminCore plugin) {
 		this.plugin = plugin; }
     
 	private boolean isVanished(Player player) {
@@ -130,7 +129,7 @@ public class GameListener implements Listener{
 		            	new PlayerList(player);
 		            } else if (e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&cBan Gui"))) {
 		            	if (e.getClick() == ClickType.MIDDLE) {return;}
-		            	new BanGUI(player);
+		            	player.sendMessage(Methods.color(Config.pluginPrefix() + "&c&lThis feature is only available in the future"));
 		            }
 		}
 	}

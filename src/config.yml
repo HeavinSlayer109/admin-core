@@ -1,6 +1,22 @@
 # Uncategorized
 prefix: "&7[&6STAFF&7]&r" #leave the "&r" on the end of the prefix or the color will break // put the word None if you want to disable the prefix
 no-permission: "&cYou dont have permission to use this command/feature!"
+# ======================
+msg-spy-detectors:
+  - '/w'
+  - '/whisper'
+  - '/pm'
+  - '/privatemessage'
+  - '/msg'
+  - '/message'
+  - '/tell'
+reply-spy-detectors: 
+  - '/reply'
+  - '/r'
+msg-spy-format: "&7[&c%sender% &7-> &e%target%&7] %message%"
+command-spy-format: "&6%sender% &7has sent the command %command%"
+# ======================
+
 # Staff Configuration
 staffmode-enabled-message: "&aYou have &aenabled &6Staff Mode"
 staffmode-disabled-message: "&aYou have &cdisabled &6Staff Mode"
@@ -19,7 +35,6 @@ flight-disabled-message: "&aYou have &cdisbled &6Flight Mode"
 
 
 
-
 # Admin GUI Configurations
 teleported-to-player: "&eYou have teleported to %target%"
 
@@ -28,9 +43,9 @@ teleported-to-player: "&eYou have teleported to %target%"
 
 
 # BAN Configuration
-ban:
-  duration: # -Material,Length
-    -
+ban-message:
+unban-message:
+
 
 less-likely-to-be-used:
   staff-already-enabled: "&cYou already enabled &eStaff Mode"

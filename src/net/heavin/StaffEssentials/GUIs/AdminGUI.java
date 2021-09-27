@@ -192,6 +192,10 @@ public class AdminGUI {
 		}
 
 		banguiMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&cBan Gui"));
+		ArrayList<String> lore = new ArrayList<String>();
+		lore.add(Methods.color("&c&lThis feature is only currently being reworked!"));
+		lore.add(Methods.color("&c&lIt will be available for use in the future"));
+		banguiMeta.setLore(lore);
 		bangui.setItemMeta(banguiMeta);
 		gui.setItem(29, bangui);
 		

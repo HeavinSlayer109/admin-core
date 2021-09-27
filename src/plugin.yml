@@ -1,9 +1,14 @@
-main: net.heavin.StaffEssentials.StaffEssentials
+main: net.heavin.StaffEssentials.StaffHeavinCore
 version: 1.0
-name: StaffEssentials
-api-version: 1.16
-softdepend: [SuperVanish]
+name: AdminCore
+api-version: 1.13
 commands:
   staff:
     description: Main Command for the plugin
-    aliases: [staffessentials, se]
+    aliases: [staffcore, sc]
+  kick:
+    description: Kick a player
+  ban:
+    description: Ban a player
+  unban:
+    description: Unban a player
