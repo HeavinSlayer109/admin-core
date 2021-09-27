@@ -1,7 +1,7 @@
 
 # Admin Core
 
-**AdminCore** is an a light weight plugin for server owners to make their staff members' job
+**AdminCore** is a light weight plugin for server owners to make their staff members' job
 easier. With **AdminCore**, server moderation will never be easier and fun. Though, its not
 finished yet, I am posting the latest source code in here.
 
