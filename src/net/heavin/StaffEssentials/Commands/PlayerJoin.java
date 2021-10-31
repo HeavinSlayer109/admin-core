@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import net.heavin.StaffEssentials.DataManagers.DataManager;
  
 public class PlayerJoin implements Listener {
- 
+	
 	private DataManager data;
 	public PlayerJoin(DataManager data) {
 		this.data = data;

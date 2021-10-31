@@ -1,4 +1,4 @@
-main: net.heavin.StaffEssentials.StaffHeavinCore
+main: net.heavin.StaffEssentials.AdminCore
 version: 1.0
 name: AdminCore
 api-version: 1.13

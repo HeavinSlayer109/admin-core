@@ -100,7 +100,7 @@ public class AdminGUI {
 			filler.setItemMeta(fillerMeta);
 			gui.setItem(i, filler);
 			}
-			}
+		}
 		
 		
 		if (!Methods.playercheck.containsValue(player)) {

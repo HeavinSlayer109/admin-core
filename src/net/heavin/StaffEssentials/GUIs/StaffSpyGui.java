@@ -171,38 +171,6 @@ public class StaffSpyGui implements Listener {
     	
     }
 }
-	
-	@EventHandler
-	public void onReplyMessage(PlayerCommandPreprocessEvent e) {
-		Player player = e.getPlayer();
-        String message = e.getMessage();
-        String format = Config.msgSpyFormat();
-        String senderFinal = player.getName();
-        
-        
-        String[] msgSplit = message.split(" ", 3);
-        String[] targetSplit = message.split(" ", 3);
-        String[] cmdSplit = message.split(" ", 3);
-        
-        
-        String messageFinal = msgSplit[2];
-        String targetFinal = targetSplit[1];
-        String cmddetector = cmdSplit[0];
-        
-        
-        format = format.replace("%sender%", senderFinal);
-        format = format.replace("%target%", targetFinal);
-        format = format.replace("%message%", messageFinal);
-		
-        
-        for(Player ol : msgspycheck.keySet()) {
-		if (cmddetector.equalsIgnoreCase("/reply")
-    	 || cmddetector.equalsIgnoreCase("/r")) {
-    		targetFinal = msgtarget.get(player.getName());
-    		
-    		ol.sendMessage(Methods.color(Config.pluginPrefix() + format));
-		}
-	  }
-	}
+
 }
 

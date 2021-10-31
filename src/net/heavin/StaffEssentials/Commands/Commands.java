@@ -18,7 +18,6 @@ import net.heavin.StaffEssentials.GUIs.AdminGUI;
 import net.heavin.StaffEssentials.GUIs.PlayerList;
 import net.heavin.StaffEssentials.GUIs.StaffGUI;
 import net.heavin.StaffEssentials.GUIs.StaffSpyGui;
-import net.heavin.StaffEssentials.GUIs.Ban.BanGUI;
 import net.heavin.StaffEssentials.Managers.Methods;
 
 public class Commands implements CommandExecutor, TabCompleter {
@@ -84,15 +83,10 @@ public class Commands implements CommandExecutor, TabCompleter {
 			    				new StaffSpyGui(player);
 		    			} else {player.sendMessage(Methods.color(Config.pluginPrefix() + "&cInvalid arguments: /se admin [gui, staffspy]"));}
 		    	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
-		    	
 		    } else if (args.length == 1 && args[0].equalsIgnoreCase("playerlist")) {
 		    	new PlayerList(player);
-		    } else if (args.length == 1 && args[0].equalsIgnoreCase("debug")) {
-		    	player.sendMessage(player.getName());
-		    	if (player.getName().equals("birdh")) {
-		    		
-		    		new BanGUI(player);
-		    	} else {player.sendMessage(Methods.color("&7[&4&lERROR&7] &cYou are not the author of the plugin!"));}
+		    } else {
+		    	player.sendMessage(Config.pluginPrefix() + "&cInvalid argument, /staffcore [help, enable, disable, gui, vanish, admin]");
 		    }
 		    } else { System.out.println("This command cannot be sent on the console or a commandblock"); }
 		return false;
