@@ -1,14 +1,11 @@
 main: net.heavin.StaffEssentials.AdminCore
 version: 1.0
 name: AdminCore
-api-version: 1.13
+api-version: 1.16
 commands:
-  staff:
+  admincore:
     description: Main Command for the plugin
-    aliases: [staffcore, sc]
-  kick:
-    description: Kick a player
-  ban:
-    description: Ban a player
-  unban:
-    description: Unban a player
+    aliases: [admin, ac]
+  report:
+  warning:
+    aliases: [warn]

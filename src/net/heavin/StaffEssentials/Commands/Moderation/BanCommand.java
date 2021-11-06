@@ -14,7 +14,7 @@ import net.heavin.StaffEssentials.Managers.Methods;
 
  
 public class BanCommand implements CommandExecutor {
- 
+	// IF YOU'RE WONDERING WHY I DIDNT REGISTER THIS, ITS BECAUSE ITS NOT SUPPOSED TO BE USED IN THE PLUGIN
 	private DataManager data;
 	public BanCommand(DataManager data) {
 		this.data = data;

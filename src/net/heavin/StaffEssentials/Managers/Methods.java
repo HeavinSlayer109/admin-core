@@ -22,7 +22,7 @@ public class Methods {
 	}
 	
 	public static void enableStaff(Player player) {
-		if (player.hasPermission("se.staff")) {
+		if (player.hasPermission("admincore.staff")) {
 			if (playercheck.containsKey(player.getName())) { 
 				player.sendMessage(color(Config.pluginPrefix() + Config.staffAlreadyEnabled()));
 			} else {
@@ -35,7 +35,7 @@ public class Methods {
 	}
 	@SuppressWarnings("deprecation")
 	public static void disableStaff(Player player) {
-		if (player.hasPermission("se.staff")) {
+		if (player.hasPermission("admincore.staff")) {
 			if (playercheck.containsKey(player.getName())) {
 				if(!playercheck.containsKey(player.getName())) {player.sendMessage(color(Config.pluginPrefix() + Config.staffAlreadyDisabled()));}
 				if (vanishCheck.containsKey(player.getName())) { vanishCheck.remove(player.getName()); player.showPlayer(player); }
@@ -49,7 +49,7 @@ public class Methods {
 	}
 	@SuppressWarnings("deprecation")
 	public static void enableVanish(Player player) {
-		if (player.hasPermission("se.vanish")) {
+		if (player.hasPermission("admincore.vanish")) {
 			if (playercheck.containsKey(player.getName())) {
 				if (vanishCheck.containsKey(player.getName())) {
 				return;
@@ -61,7 +61,7 @@ public class Methods {
 				} else { player.sendMessage(color(Config.pluginPrefix() + Config.notInStaffMode()));}
 		}
 		
-		//if (player.hasPermission("se.vanish")) {
+		//if (player.hasPermission("admincore.vanish")) {
 		//	if (!vanishCheck.containsValue(player)) {
         //		player.sendMessage(color(Config.vanishEnabledMessage()));
         //		for(Player onlineplayers : Bukkit.getOnlinePlayers()) {
@@ -74,7 +74,7 @@ public class Methods {
 	} 
 	@SuppressWarnings("deprecation")
 	public static void disableVanish(Player player) {
-		if (player.hasPermission("se.vanish")) {
+		if (player.hasPermission("admincore.vanish")) {
 			if (playercheck.containsKey(player.getName())) {
 				if (vanishCheck.containsKey(player.getName())) {
 					vanishCheck.remove(player.getName(), player);
@@ -86,7 +86,7 @@ public class Methods {
         } else {player.sendMessage(color(Config.pluginPrefix() + Config.notInStaffMode()));}
 	} else { player.sendMessage(color(Config.noPermission())); }
 }
-		//if (player.hasPermission("se.vanish")) {
+		//if (player.hasPermission("admincore.vanish")) {
 			//if (vanishCheck.containsValue(player)) {
 				//if (playercheck.containsKey(player.getName())) {
 	        		//player.sendMessage(color(Config.vanishEnabledMessage()));
@@ -98,7 +98,7 @@ public class Methods {
  //      }
 	
 	public static void enableNightVision(Player player) {
-		if (player.hasPermission("se.nightvision")) {
+		if (player.hasPermission("admincore.nightvision")) {
 			if(playercheck.containsKey(player.getName())) {
 				if (nvisionCheck.containsKey(player.getName())) {
 					return;
@@ -113,7 +113,7 @@ public class Methods {
 	}
 
 	public static void disableNightVision(Player player) {
-		if (player.hasPermission("se.vanish")) {
+		if (player.hasPermission("admincore.vanish")) {
 			if (playercheck.containsKey(player.getName())) {
 				if (nvisionCheck.containsKey(player.getName())) {
 					nvisionCheck.remove(player.getName(), player);
@@ -124,7 +124,7 @@ public class Methods {
 	} else { player.sendMessage(color(Config.noPermission())); }
 }
 	public static void enableFlight(Player player) {
-		if (player.hasPermission("se.fly")) {
+		if (player.hasPermission("admincore.fly")) {
 			if (playercheck.containsKey(player.getName())) {
 				if (flightCheck.containsKey(player.getName())) {
 					return;
@@ -140,7 +140,7 @@ public class Methods {
  }
 	
 	public static void disableFlight(Player player) {
-		if (player.hasPermission("se.fly")) {
+		if (player.hasPermission("admincore.fly")) {
 			if (playercheck.containsKey(player.getName())) {
 				if (flightCheck.containsKey(player.getName())) {
 					flightCheck.remove(player.getName(), player);

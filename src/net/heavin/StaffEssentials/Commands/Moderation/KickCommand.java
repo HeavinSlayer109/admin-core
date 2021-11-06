@@ -11,11 +11,11 @@ import net.heavin.StaffEssentials.DataManagers.Config;
 import net.heavin.StaffEssentials.Managers.Methods;
  
 public class KickCommand implements CommandExecutor {
- 
+	// IF YOU'RE WONDERING WHY I DIDNT REGISTER THIS, ITS BECAUSE ITS NOT SUPPOSED TO BE USED IN THE PLUGIN
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
  
-        if (label.equalsIgnoreCase("kick")) {
+    	if (label.equalsIgnoreCase("kick")) {
             if (args.length == 0) {
                 sender.sendMessage(Methods.color(Config.pluginPrefix() + "Please specify a player and reason!"));
             } else if (args.length == 1) {
@@ -24,7 +24,7 @@ public class KickCommand implements CommandExecutor {
                 Player target = Bukkit.getPlayer(args[0]);
  
                 if (target == null) {
-                    sender.sendMessage(Methods.color(Config.pluginPrefix()+args[0]+" is not online!"));
+                    sender.sendMessage(Methods.color(Config.pluginPrefix() + args[0] + " is not online!"));
                     return true;
                 }
  

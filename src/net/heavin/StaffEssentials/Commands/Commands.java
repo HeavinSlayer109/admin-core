@@ -32,36 +32,36 @@ public class Commands implements CommandExecutor, TabCompleter {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			if (args.length == 0) {
-				if (player.hasPermission("se.staff")) {
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7---------- &7[&6Staff Essentials&7] &7----------"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se enable &7- Turn on staff mode"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se disable &7- Turn off staff mode"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se gui &7- GUI for staff and moderators"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se admin &7- GUI for administrators"));
+				if (player.hasPermission("admincore.staff")) {
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7---------- &7[&6Admin Core&7] &7----------"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore enable &7- Turn on staff mode"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore disable &7- Turn off staff mode"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore gui &7- GUI for staff and moderators"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore admin &7- GUI for administrators"));
 				} else {player.sendMessage(Methods.color(Config.pluginPrefix() + "&cSorry but this command is only used for staff members!"));}
 			} else if (args.length == 1 && args[0].equalsIgnoreCase("enable")) {
-		    	if (player.hasPermission("se.staff")) {
+		    	if (player.hasPermission("admincore.staff")) {
 		    			Methods.enableStaff(player);
 				} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		    	
 			} else if (args.length == 1 && args[0].equalsIgnoreCase("disable")) {
-				if (player.hasPermission("se.staff")) {
+				if (player.hasPermission("admincore.staff")) {
 				Methods.disableStaff(player);
 				} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		    } else if (args.length == 1 && args[0].equalsIgnoreCase("help")) {
-		    	if (player.hasPermission("se.staff")) {
-		    	player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7---------- &7[&6Staff Essentials&7] &7----------"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se enable &7- Turn on staff mode"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se disable &7- Turn off staff mode"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se gui &7- GUI for staff and moderators"));
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/se admin &7- GUI for administrators"));
+		    	if (player.hasPermission("admincore.staff")) {
+		    	player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7---------- &7[&6Admin Core&7] &7----------"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore enable &7- Turn on staff mode"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore disable &7- Turn off staff mode"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore gui &7- GUI for staff and moderators"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6/admincore admin &7- GUI for administrators"));
 		    	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + "&cSorry but this command is only used for staff members!"));}
 		    } else if (args.length == 1 && args[0].equalsIgnoreCase("gui")) {
-		    	if (player.hasPermission("se.staff")) {
+		    	if (player.hasPermission("admincore.staff")) {
 		    	new StaffGUI(player);
 		    	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		    } else if (args.length == 1 && args[0].equalsIgnoreCase("vanish")) {
-		    	if (player.hasPermission("se.vanish")) {
+		    	if (player.hasPermission("admincore.vanish")) {
 		    		if (Methods.vanishCheck.containsKey(player.getName())) {
 		    			Methods.disableVanish(player);
 		    		} else {Methods.enableVanish(player);}
@@ -70,23 +70,25 @@ public class Commands implements CommandExecutor, TabCompleter {
 		    	
 		    	
 		    } else if (args.length == 1) {
-		    	if (player.hasPermission("se.admin")) {
+		    	if (player.hasPermission("admincore.admin")) {
 		    		if (args[0].equals("admin")) {
-		    			player.sendMessage(Methods.color(Config.pluginPrefix() + "&cInvalid arguments: /se admin [gui, staffspy]"));
+		    			player.sendMessage(Methods.color(Config.pluginPrefix() + "&cInvalid arguments: /admincore admin [gui, staffspy]"));
 				    	}
 		    }
 		    } else if (args.length == 2 && args[0].equalsIgnoreCase("admin")) {
-		    	if (player.hasPermission("se.admin")) {
+		    	if (player.hasPermission("admincore.admin")) {
 		    		 if (args[1].equalsIgnoreCase("gui")) {
 		    		    	new AdminGUI(player);
 		    			} else if (args[1].equalsIgnoreCase("staffspy")) {
 			    				new StaffSpyGui(player);
-		    			} else {player.sendMessage(Methods.color(Config.pluginPrefix() + "&cInvalid arguments: /se admin [gui, staffspy]"));}
+		    			} else {player.sendMessage(Methods.color(Config.pluginPrefix() + "&cInvalid arguments: /admincore admin [gui, staffspy]"));}
 		    	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		    } else if (args.length == 1 && args[0].equalsIgnoreCase("playerlist")) {
-		    	new PlayerList(player);
+		    	if (player.hasPermission("admincore.playerlist")) {
+            		new PlayerList(player);
+            	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		    } else {
-		    	player.sendMessage(Config.pluginPrefix() + "&cInvalid argument, /staffcore [help, enable, disable, gui, vanish, admin]");
+		    	player.sendMessage(Config.pluginPrefix() + "&cInvalid argument, /admincore [help, enable, disable, gui, vanish, admin]");
 		    }
 		    } else { System.out.println("This command cannot be sent on the console or a commandblock"); }
 		return false;

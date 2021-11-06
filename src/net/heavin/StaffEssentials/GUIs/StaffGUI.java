@@ -147,13 +147,10 @@ public class StaffGUI {
 		gui.setItem(11, dvanish);
 		}
 		
-		
-		
-		
 		if (!Methods.nvisionCheck.containsValue(player)) {
 			enightvisionMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&aToggle Night-Vision On"));
 			List<String> envisionlore = new ArrayList<>();
-			envisionlore.add(ChatColor.translateAlternateColorCodes('&', "&6Night-Vision &7is currenty &cOff"));
+			envisionlore.add(ChatColor.translateAlternateColorCodes('&', "&6Night-Vision &7is currently &cOff"));
 			envisionlore.add(ChatColor.translateAlternateColorCodes('&', ""));
 			envisionlore.add(ChatColor.translateAlternateColorCodes('&', "&7Turning on &6Night-Vision &7 will let you"));
 			envisionlore.add(ChatColor.translateAlternateColorCodes('&', "&7see in the dark while in &eStaff-Mode"));
@@ -168,10 +165,22 @@ public class StaffGUI {
 		
 		if (!Methods.flightCheck.containsValue(player)) {
 			eflightMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&aToggle Flight On"));
+			List<String> eflightlore = new ArrayList<>();
+			eflightlore.add(ChatColor.translateAlternateColorCodes('&', "&6Flight-Mode &7is currently &cOff"));
+			eflightlore.add(ChatColor.translateAlternateColorCodes('&', ""));
+			eflightlore.add(ChatColor.translateAlternateColorCodes('&', "&7Turning on &6Flight-Mode &7will let you"));
+			eflightlore.add(ChatColor.translateAlternateColorCodes('&', "&7fly while in &eStaff-Mode"));
+			eflightMeta.setLore(eflightlore);
 			eflight.setItemMeta(eflightMeta);
 			gui.setItem(15, eflight);
 		} else if (Methods.flightCheck.containsValue(player)) {
 			dflightMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&cToggle Flight Off"));
+			List<String> dflightlore = new ArrayList<>();
+			dflightlore.add(ChatColor.translateAlternateColorCodes('&', "&6Flight-Mode &7is currently &cOn"));
+			dflightlore.add(ChatColor.translateAlternateColorCodes('&', ""));
+			dflightlore.add(ChatColor.translateAlternateColorCodes('&', "&7Turning on &6Flight-Mode &7will let you"));
+			dflightlore.add(ChatColor.translateAlternateColorCodes('&', "&7fly while in &eStaff-Mode"));
+			dflightMeta.setLore(dflightlore);
 			dflight.setItemMeta(dflightMeta);
 			gui.setItem(15, dflight);
 		}

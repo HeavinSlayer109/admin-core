@@ -1,3 +1,5 @@
+
+
 # Uncategorized
 prefix: "&7[&6STAFF&7]&r" #leave the "&r" on the end of the prefix or the color will break // put the word None if you want to disable the prefix
 no-permission: "&cYou dont have permission to use this command/feature!"
@@ -26,10 +28,10 @@ vanish-enabled-message: "&aYou have &eenabled &eVanish Mode"
 vanish-disabled-message: "&aYou have &cdisabled &eVanish Mode"
 # Night Vision Configuration
 night-vision-enabled-message: "&aYou have &aenabled &6Night-Vision"
-night-vision-disabled-message: "&aYou have &cdisbled &6Night-Vision"
+night-vision-disabled-message: "&aYou have &cdisabled &6Night-Vision"
 # Flight Configuration 
 flight-enabled-message: "&aYou have &aenabled &6Flight Mode"
-flight-disabled-message: "&aYou have &cdisbled &6Flight Mode"
+flight-disabled-message: "&aYou have &cdisabled &6Flight Mode"
 
 
 
@@ -42,9 +44,18 @@ teleported-to-player: "&eYou have teleported to %target%"
 
 
 
-# BAN Configuration
-ban-message:
-unban-message:
+# Report | 
+report-successful: "&cReported %reported% for reason: %reason%" #Can use %reporter% %reported% %reason% placeholders
+report-no-player-argument: "&cPlease specify the player you want to report!"
+report-player-not-online: "&cPlayer %reported% is not online!" #    Can use %reported% placeholder
+report-no-reason: "&cPlease specify a reason for this report!"
+report-recieve-message: "&c%reporter% reported %reported% for %reason%" #Can use %reporter% %reported% %reason% placeholders
+
+# Warning | 
+warn-successful: "&cReported %reported% for reason: %reason%" #Can use %reporter% %reported% %reason% placeholders
+warn-no-player-argument: "&cPlease specify the player you want to report!"
+warn-player-not-online: "&cPlayer %reported% is not online!" #    Can use %reported% placeholder
+warn-no-reason: "&cPlease specify a reason for this report!"
 
 
 less-likely-to-be-used:

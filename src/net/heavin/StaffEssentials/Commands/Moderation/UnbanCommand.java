@@ -11,6 +11,7 @@ import net.heavin.StaffEssentials.DataManagers.DataManager;
 import net.heavin.StaffEssentials.Managers.Methods;
  
 public class UnbanCommand implements CommandExecutor {
+	// IF YOU'RE WONDERING WHY I DIDNT REGISTER THIS, ITS BECAUSE ITS NOT SUPPOSED TO BE USED IN THE PLUGIN
 	private DataManager data;
 	public UnbanCommand(DataManager data) {
 		this.data = data;
@@ -37,7 +38,7 @@ public class UnbanCommand implements CommandExecutor {
                 Bukkit.getServer().getConsoleSender().sendMessage(Methods.color("&c&l" + unbanner + " &ehas unbanned " + "" + args[0].toString()));
                 
                 for (Player onlineplr : Bukkit.getOnlinePlayers()) {
-                	if (onlineplr.hasPermission("se.staff")) {
+                	if (onlineplr.hasPermission("admincore.staff")) {
                 onlineplr.sendMessage(Methods.color("&c&l" + unbanner + " &ehas unbanned " + "" + args[0].toString()));
                 	}
             }

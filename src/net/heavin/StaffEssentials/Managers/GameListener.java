@@ -126,7 +126,9 @@ public class GameListener implements Listener{
 		            	new AdminGUI(player);
 		            } else if (e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&aCurrent Online Player List"))) {
 		            	if (e.getClick() == ClickType.MIDDLE) {return;}
-		            	new PlayerList(player);
+		            	if (player.hasPermission("admincore.playerlist")) {
+		            		new PlayerList(player);
+		            	} else {player.sendMessage(Methods.color(Config.pluginPrefix() + Config.noPermission()));}
 		            } else if (e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&cBan Gui"))) {
 		            	if (e.getClick() == ClickType.MIDDLE) {return;}
 		            	player.sendMessage(Methods.color(Config.pluginPrefix() + "&c&lThis feature is only available in the future"));
@@ -146,7 +148,6 @@ public class GameListener implements Listener{
 		if (e.getView().getTitle().contains("Online Players") && e.getRawSlot() < 54 && e.getCurrentItem().getItemMeta() !=null) {
 			if (e.getClick() == ClickType.MIDDLE) {return;}
 			e.setCancelled(true);
-			player.sendMessage("debug");
 			Player targetplr = Bukkit.getPlayer(ChatColor.stripColor(e.getCurrentItem().getItemMeta().getDisplayName()));
 			Location targetloc = targetplr.getLocation();
 			

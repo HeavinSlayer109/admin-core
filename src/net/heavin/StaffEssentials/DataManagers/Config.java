@@ -164,5 +164,42 @@ public class Config {
 	  public static String unbanMessage() {
 	    return getConfig().getString("unban-message");
 	  }
+	  
+	  /*
+	   * REPORT MESSAGES
+	   * 
+	   */
+	  public static String reportSuccess() {
+		return getConfig().getString("report-successful");
+	  }
+	  public static String reportNoPlayerArg() {
+		return getConfig().getString("report-no-player-argument");
+	  }
+	  public static String reportPlayerNotOnline() {
+		return getConfig().getString("report-player-not-online");
+	  }
+	  public static String reportNoReason() {
+		return getConfig().getString("report-no-reason");
+	  }
+	  public static String reportRecieveMessage() {
+		return getConfig().getString("report-recieve-message");
+	  }
+	  
+	  /*
+	   * WARNING MESSAGES
+	   * 
+	   */
+	  public static String warnSuccess() {
+		return getConfig().getString("warn-successful");
+	  }
+	  public static String warnNoPlayerArg() {
+		return getConfig().getString("warn-no-player-argument");
+	  }
+	  public static String warnPlayerNotOnline() {
+		return getConfig().getString("warn-player-not-online");
+	  }
+	  public static String warnNoReason() {
+		return getConfig().getString("warn-no-reason");
+	  }
 
 }
