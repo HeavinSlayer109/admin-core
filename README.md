@@ -13,9 +13,9 @@ finished yet, I am posting the latest source code in here.
 
 The plugin will be released when the progress bar hits 100%
 
-#### Will there be any api for the plugin?
 
-Api's will be released upon release of AdminCore
+
+
 
   
 ## Features
