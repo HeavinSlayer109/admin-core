@@ -1,11 +1,48 @@
-main: net.heavin.StaffEssentials.AdminCore
-version: 1.0
+main: cf.heavin.AdminCore.AdminCore
+version: 1.1
 name: AdminCore
 api-version: 1.16
 commands:
   admincore:
     description: Main Command for the plugin
     aliases: [admin, ac]
+    permission: admincore.staff
+  warn:
+    description: Warning command
+    permission: admincore.warn
+  warns:
+    aliases: [warnings]
+    permission: admincore.warns
+  clearwarns:
+    aliases: [cwarns, clearwarnings]
+    permission: admincore.warns.clear
   report:
-  warning:
-    aliases: [warn]
+    permission: admincore.report
+  reports:
+    permission: admincore.reports
+    
+permissions:
+  admincore.staff:
+    description: Allows the use of /admincore
+  admincore.admin:
+    description: Permission node for admin, allows /ac admin
+  admincore.vanish:
+    description: Allows player to vanish using /ac vanish
+  admincore.cansee:
+    description: Allows players to see vanished staff members
+  admincore.fly:
+    description: Allows player to fly using /ac fly
+  admincore.playerlist:
+    description: Allows player to view the playerlist using /ac playerlist
+  admincore.warn:
+    description: Allows player to warn a target. /warn target reason true|false
+  admincore.warns:
+    description: Allows player to view a target's recent warnings. /warns target
+  admincore.warns.clear:
+    description: Allows player to clear a target's warnings. /warns clear target
+  admincore.report:
+    description: Allows player to report players
+  admincore.reports:
+    description: Allows player to view a target's reports
+  admincore.*:
+    description: Permission wildcard, allows the use of every command in the AdminCore plugin
