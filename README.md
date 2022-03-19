@@ -6,7 +6,7 @@ easier. With **AdminCore**, server moderation will never be easier and fun. Thou
 finished yet, I am posting the latest source code in here.
 
 **Plugin Progress Bar**
-![ProgressBar](https://progress-bar.dev/45)
+![ProgressBar](https://progress-bar.dev/60)
 ## FAQ
 
 #### When will the plugin be released
